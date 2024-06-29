@@ -1,9 +1,16 @@
 [build]
-  command = "composer install && php artisan key:generate && php artisan migrate --force && npm install && npm run prod"
+  command = "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate --force && npm install && npm run prod"
   publish = "public"
 
 [context.production.environment]
   PHP_VERSION = "8.2"
+  APP_KEY = "base64:YourGeneratedAppKey" # Замените на ваш сгенерированный ключ
+  DB_CONNECTION = "mysql"
+  DB_HOST = "your_db_host"
+  DB_PORT = "3306"
+  DB_DATABASE = "your_db_name"
+  DB_USERNAME = "your_db_user"
+  DB_PASSWORD = "your_db_password"
 
 [[redirects]]
   from = "/*"
