@@ -1,5 +1,5 @@
 [build]
-  command = "cp .env.example .env && composer install && php artisan key:generate && php artisan migrate --force && npm install && npm run prod"
+  command = "cp .env.example .env"
   publish = "public"
 
 [context.production.environment]
