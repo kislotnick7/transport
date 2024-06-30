@@ -12,7 +12,7 @@
   DB_USERNAME = "kislotnick"
   DB_PASSWORD = "ne489177"
 
-[redirects]
+[[redirects]]
   from = "/*"
   to = "/index.php"
   status = 200
